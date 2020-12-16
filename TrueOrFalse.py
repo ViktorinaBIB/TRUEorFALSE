@@ -54,7 +54,7 @@ def que2():
 def que3():
     question = Label(root, text= "Утиное крякание не дает эхо")
     btn1 = Button (root, text="Правда", font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que4))
-    btn2 = Button (root, text="Ложь", font = "Calibri" bg="red3", fg="black", command=lambda: next_w(que4))
+    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_w(que4))
     question.pack()
     btn1.pack()
     btn2.pack()
@@ -84,9 +84,9 @@ def que4():
         que5()
 
 def que5():
-    question = Label(root, text= "Жираф может прожить без воды")
+    question = Label(root, text= "Жираф может прожить без воды ")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que6))
-    btn2 = Button (root, text="Ложь", font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que6))
+    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_w(que6))
     question.pack()
     btn1.pack()
     btn2.pack()
@@ -102,7 +102,7 @@ def que5():
 def que6():
     question = Label(root, text= "Несмоторя на внушительные размеры белого кита, его сердце всего лишь в 2 раза больше человеческого")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
-    btn2 = Button (root, text="Ложь", font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que7))
+    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que7))
     question.pack()
     btn1.pack()
     btn2.pack()
@@ -118,7 +118,7 @@ def que6():
 def que7():
     question = Label(root, text= "Галапагосские черепахи - единственные существа в мире, у которых самцы выращивают потомство")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
-    btn2 = Button (root, text="Ложь", font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que8))
+    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que8))
     question.pack()
     btn1.pack()
     btn2.pack()
@@ -166,7 +166,7 @@ def que9():
 def que10():
     question = Label(root, text="Больше всего озер расположено в Канаде")
     btn1=Button(root,text="Правда",font="Calibri", bg="OliveDrab2",fg="black",command=lambda:next_r(res))
-    btn2=Button(root,text="Ложь",font="Calibri", bg="red3",fg="black",command=lambda:next_ w(res))
+    btn2=Button(root,text="Ложь",font="Calibri", bg="red3",fg="black",command=lambda:next_w(res))
     question.pack()
     btn1.pack()
     btn2.pack()
@@ -178,3 +178,14 @@ def que10():
     def next_w(res):
         clear()
         res()
+
+def res():
+    result = Label(root, text='Результат: '+ count + ' из 10')
+    if (count<=10) and (count>=8):
+        desctiption = "Поздравляем! Прекрасный результат!"
+    elif (count<=7) and (count>=5):
+        description = "Неплохо! Вы достаточно много знвете."
+    elif (count<=4) and (count>=0):
+        desription = "Не расстраивайтесь! Вы можете попробовать ещё раз."
+    result.pack()
+    description.pack()
