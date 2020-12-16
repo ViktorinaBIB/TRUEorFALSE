@@ -100,10 +100,12 @@ def que5():
         que6()
 
 def que6():
-    question = Label(root, text= "Несмоторя на внушительные размеры белого кита, его сердце всего лишь в 2 раза больше человеческого")
+    question = Label(root, text= "Несмоторя на внушительные размеры белого кита,")
+    question2 = Label(root, text = "его сердце всего лишь в 2 раза больше человеческого")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que7))
     question.pack()
+    queston2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que7):
@@ -116,10 +118,12 @@ def que6():
         que7()
 
 def que7():
-    question = Label(root, text= "Галапагосские черепахи - единственные существа в мире, у которых самцы выращивают потомство")
+    question = Label(root, text= "Галапагосские черепахи - единственные существа в мире,")
+    question2 = Label(root, text = "у которых самцы выращивают потомство")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que8))
     question.pack()
+    quesrion2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que8):
@@ -180,7 +184,7 @@ def que10():
         res()
 
 def res():
-    result = Label(root, text='Результат: '+ count + ' из 10')
+    result = Label(root, text='Результат: '+ str(count) + ' из 10')
     if (count<=10) and (count>=8):
         desctiption = "Поздравляем! Прекрасный результат!"
     elif (count<=7) and (count>=5):
