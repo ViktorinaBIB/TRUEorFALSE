@@ -8,7 +8,7 @@ root.geometry('400x400')
 background_label = Label(root, image=image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1) 
 count=0
-root.mainloop()
+
 
 def clear():
     list=root.pack_slaves()
@@ -184,8 +184,10 @@ def res():
     if (count<=10) and (count>=8):
         desctiption = "Поздравляем! Прекрасный результат!"
     elif (count<=7) and (count>=5):
-        description = "Неплохо! Вы достаточно много знвете."
+        description = "Неплохо! Вы достаточно много знаете."
     elif (count<=4) and (count>=0):
         desription = "Не расстраивайтесь! Вы можете попробовать ещё раз."
     result.pack()
     description.pack()
+que1()
+root.mainloop()
