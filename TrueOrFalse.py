@@ -192,6 +192,7 @@ def res():
     elif (count<=4) and (count>=0):
         description = "Не расстраивайтесь! Вы можете попробовать ещё раз."
     result.pack()
+    description=Label(root, text=str(description))
     description.pack()
 que1()
 root.mainloop()
