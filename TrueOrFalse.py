@@ -105,7 +105,7 @@ def que6():
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que7))
     question.pack()
-    queston2.pack()
+    question2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que7):
@@ -123,7 +123,7 @@ def que7():
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que8))
     question.pack()
-    quesrion2.pack()
+    question2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que8):
@@ -152,7 +152,7 @@ def que8():
         que9()
 
 def que9():
-    question = Label(root, text="Существуют рыбы, кторык могут жить на суше")
+    question = Label(root, text="Существуют рыбы, которые могут жить на суше")
     btn1=Button(root,text="Правда",font="Calibri", bg="OliveDrab2",fg="black",command=lambda:next_r(que10))
     btn2=Button(root,text="Ложь",font="Calibri", bg="red3",fg="black",command=lambda:next_w(que10))
     question.pack()
@@ -186,11 +186,11 @@ def que10():
 def res():
     result = Label(root, text='Результат: '+ str(count) + ' из 10')
     if (count<=10) and (count>=8):
-        desctiption = "Поздравляем! Прекрасный результат!"
+        description = "Поздравляем! Прекрасный результат!"
     elif (count<=7) and (count>=5):
         description = "Неплохо! Вы достаточно много знаете."
     elif (count<=4) and (count>=0):
-        desription = "Не расстраивайтесь! Вы можете попробовать ещё раз."
+        description = "Не расстраивайтесь! Вы можете попробовать ещё раз."
     result.pack()
     description.pack()
 que1()
