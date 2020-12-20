@@ -4,7 +4,7 @@ from PIL import ImageTk,Image
 root = Tk()
 root.title('Правда или Ложь')
 image = ImageTk.PhotoImage(file = "C:\\Users\\olesya\\Pictures\\Screenshots\\RkNC2XOxYdM.png")
-root.geometry('400x400')
+root.geometry('800x800')
 background_label = Label(root, image=image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1) 
 count=0
@@ -98,7 +98,7 @@ def que4():
 
 def que5():
     '''Отображает пятый вопрос и кнопки для ответа'''
-    question = Label(root, text= "Жираф может прожить без воды дольше, чем верблюд")
+    question = Label(root, text= "Жираф может прожить без воды дольше, чем верблюд", font = ("KacstArt", 40))
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que6))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_w(que6))
     question.pack()
@@ -117,8 +117,8 @@ def que5():
 
 def que6():
     '''Отображает шестой вопрос и кнопки для ответа'''
-    question = Label(root, text= "Несмоторя на внушительные размеры белого кита,")
-    question2 = Label(root, text = "его сердце всего лишь в 2 раза больше человеческого")
+    question = Label(root, text= "Несмоторя на внушительные размеры белого кита,", font = ("KacstArt", 40))
+    question2 = Label(root, text = "его сердце всего лишь в 2 раза больше человеческого", font = ("KacstArt", 40))
     btn1 = Button (root, text="Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
     btn2 = Button (root, text="Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que7))
     question.pack()
@@ -138,8 +138,8 @@ def que6():
 
 def que7():
     '''Отображает седьмой вопрос и кнопки для ответа'''
-    question = Label(root, text= "Галапагосские черепахи - единственные существа в мире,")
-    question2 = Label(root, text = "у которых самцы выращивают потомство")
+    question = Label(root, text= "Галапагосские черепахи - единственные существа в мире,", font = ("KacstArt", 40))
+    question2 = Label(root, text = "у которых самцы выращивают потомство", font = ("KacstArt", 40))
     btn1 = Button (root, text="Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
     btn2 = Button (root, text="Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que8))
     question.pack()
