@@ -19,7 +19,7 @@ def clear():
 def que1():
     '''Отображает первый вопрос и кнопки для ответа'''
     question = Label(root, text = "Детёныши жирафов рождаются без пятен", font = ("KacstArt", 40))
-    btn_tr = Button(root, text = "Правда", font = ("KacstArt", 40) bg="OliveDrab2", fg="black", command=lambda: next_w(que2))
+    btn_tr = Button(root, text = "Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_w(que2))
     btn_fa = Button(root, text = "Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que2))
     question.pack()
     btn_tr.pack()
