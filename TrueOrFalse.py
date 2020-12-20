@@ -11,43 +11,50 @@ count=0
 
 
 def clear():
+    '''Очищает окно tkinter от виджетов'''
     list=root.pack_slaves()
     for l in list:
         l.destroy()
 
 def que1():
-    question = Label(root, text = "Детёныши жирафов рождаются без пятен")
-    btn_tr = Button(root, text = "Правда", bg="OliveDrab2", fg="black", command=lambda: next_w(que2))
-    btn_fa = Button(root, text = "Ложь", bg="red3", fg="black", command=lambda: next_r(que2))
+    '''Отображает первый вопрос и кнопки для ответа'''
+    question = Label(root, text = "Детёныши жирафов рождаются без пятен", font = ("KacstArt", 40))
+    btn_tr = Button(root, text = "Правда", font = ("KacstArt", 40) bg="OliveDrab2", fg="black", command=lambda: next_w(que2))
+    btn_fa = Button(root, text = "Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que2))
     question.pack()
     btn_tr.pack()
     btn_fa.pack()
 
     def next_r(que2):
+        '''Очищает окно и обращается ко второму вопросу, увеличивает счетчик на 1'''
         global count
         count+=1
         clear()
         que2()
     
     def next_w(que2):
+        '''Очищает окно и обращается ко второму вопросу'''
         clear()
         que2()
 
 def que2():
-    question = Label(root, text = "Вы не чувствуете запахов, пока спите")
-    btn_tr = Button(root, text = "Правда", bg="OliveDrab2", fg="black", command=lambda: next_r(que3))
-    btn_fa = Button(root, text = "Ложь", bg="red3", fg="black", command=lambda: next_w(que3))
+    '''Отображает второй вопрос и кнопки для ответа'''
+    question = Label(root, text = "Вы не чувствуете запахов, пока спите", font = ("KacstArt", 40))
+    btn_tr = Button(root, text = "Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_r(que3))
+    btn_fa = Button(root, text = "Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_w(que3))
     question.pack()
     btn_tr.pack()
     btn_fa.pack()
 
     def next_r(que3):
+        '''Очищает окно и обращается к третьему вопросу, увеличивает счетчик на 1'''
         global count
         count+=1
         clear()
         que3()
     
     def next_w(que3):
+        '''Очищает окно и обращается к третьему вопросу'''
         clear()
         que3()
 
@@ -90,54 +97,63 @@ def que4():
         que5()
 
 def que5():
-    question = Label(root, text= "Жираф может прожить без воды ")
+    '''Отображает пятый вопрос и кнопки для ответа'''
+    question = Label(root, text= "Жираф может прожить без воды дольше, чем верблюд")
     btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_r(que6))
     btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_w(que6))
     question.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que6):
+        '''Очищает окно и обращается к шестому вопросу, увеличивает счетчик на 1'''
         global count 
         count += 1 
         clear()
         que6()
     def next_w(que6):
+        '''Очищает окно и обращается к шестому вопросу'''
         clear()
         que6()
 
 def que6():
+    '''Отображает шестой вопрос и кнопки для ответа'''
     question = Label(root, text= "Несмоторя на внушительные размеры белого кита,")
     question2 = Label(root, text = "его сердце всего лишь в 2 раза больше человеческого")
-    btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
-    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que7))
+    btn1 = Button (root, text="Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_w(que7))
+    btn2 = Button (root, text="Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que7))
     question.pack()
     question2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que7):
+        '''Очищает окно и обращается к седьмому вопросу, увеличивает счетчик на 1'''
         global count 
         count += 1 
         clear()
         que7()
     def next_w(que7):
+        '''Очищает окно и обращается к седьмому вопросу'''
         clear()
         que7()
 
 def que7():
+    '''Отображает седьмой вопрос и кнопки для ответа'''
     question = Label(root, text= "Галапагосские черепахи - единственные существа в мире,")
     question2 = Label(root, text = "у которых самцы выращивают потомство")
-    btn1 = Button (root, text="Правда",font = "Calibri", bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
-    btn2 = Button (root, text="Ложь", font = "Calibri", bg="red3", fg="black", command=lambda: next_r(que8))
+    btn1 = Button (root, text="Правда", font = ("KacstArt", 40), bg="OliveDrab2", fg="black", command=lambda: next_w(que8))
+    btn2 = Button (root, text="Ложь", font = ("KacstArt", 40), bg="red3", fg="black", command=lambda: next_r(que8))
     question.pack()
     question2.pack()
     btn1.pack()
     btn2.pack()
     def next_r(que8):
+        '''Очищает окно и обращается к седьмому вопросу, увеличивает счетчик на 1'''
         global count 
         count += 1 
         clear()
         que8()
     def next_w(que8):
+        '''Очищает окно и обращается к седьмому вопросу'''
         clear()
         que8()
 
@@ -211,4 +227,5 @@ def res():
     description=Label(root, text=str(description),font = ("KacstArt",40))
     description.pack()
 que1()
+btn=Button(root,text="Начать заново",font="Calibri",fg="black",command=lambda:que1())
 root.mainloop()
