@@ -101,7 +101,7 @@ def que3():
 def que4():
     '''Отображает 4 вопрос и кнопки для ответа'''
     clear()
-    question = Label(root, text= "Самое ядовитое существо на планете является змеёй",font = ("KacstArt",30), bg="dark green")
+    question = Label(root, text= "Самое ядовитое существо на планете является змеёй",font = ("KacstArt",30), bg="SpringGreen4")
     btn1 = Button (root, text="Правда",font = ("KacstArt",30), bg="OliveDrab2", fg="black", command=lambda: next_w(que5))
     btn2 = Button (root, text="Ложь", font = ("KacstArt",30), bg="red3", fg="black", command=lambda: next_r(que5))
     question.pack()
@@ -281,7 +281,7 @@ def que10():
         '''Очищает окно от виджетов, вызывает функцию результат'''
         clear()
         write = Label(root, text="Вы ответили неверно", font = ("KacstArt", 30), bg="red2", fg="black")
-        btn = Button(root,text='Следующий вопрос', font = ("KacstArt", 30),bg="cyan",command=lambda:res())
+        btn = Button(root,text='Посмотреть результат', font = ("KacstArt", 30),bg="cyan",command=lambda:res())
         write.pack()
         btn.pack()
 
